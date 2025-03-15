@@ -1,26 +1,38 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <h1 class="title">Image Processing Interface</h1>
+    <ImageUploader />
+    <ProcessingResults />
+    <ImageSearch />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ImageUploader from './components/ImageUploader.vue';
+import ProcessingResults from './components/ProcessingResults.vue';
+import ImageSearch from './components/ImageSearch.vue';
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    ImageUploader,
+    ProcessingResults,
+    ImageSearch,
+  },
+};
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  background-color: #2c003c;
+  min-height: 100vh;
+  color: #e0e0e0;
+  padding: 20px;
+}
+
+.title {
+  color: #9b59b6;
+  text-shadow: 0 0 20px #9b59b6;
 }
 </style>
+
