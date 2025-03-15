@@ -23,8 +23,9 @@ export default {
   },
   async created() {
     try {
-      const response = await axios.get('https://your-api-domain.com/results');
+      const response = await axios.get('http://192.168.215.102:8443/results');
       this.results = response.data;
+      console.log(this.results);
     } catch (error) {
       console.error('Error fetching results:', error);
     }
@@ -35,7 +36,7 @@ export default {
 <style scoped>
 .results {
   color: #e0e0e0;
-  background-color: #3a003c;
+  background-color:rgba(246, 223, 178, 0.77);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px #9b59b6;

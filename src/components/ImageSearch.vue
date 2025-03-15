@@ -27,7 +27,7 @@ export default {
   methods: {
     async searchImages() {
       try {
-        const response = await axios.get(`https://your-api-domain.com/search?query=${this.searchQuery}`);
+        const response = await axios.get(`http://192.168.96.102:8443/search?query=${this.searchQuery}`);
         this.images = response.data;
       } catch (error) {
         console.error('Error searching images:', error);
@@ -35,7 +35,7 @@ export default {
     },
     async downloadImage(imageId) {
      try {
-        const response = await axios.get(`https://your-api-domain.com/download/${imageId}`, {
+        const response = await axios.get(`http://192.168.96.102:8443/download/${imageId}`, {
           responseType: 'blob', // Important for downloading files
         });
         const url = window.URL.createObjectURL(new Blob([response.data]));

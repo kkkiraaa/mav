@@ -1,0 +1,62 @@
+<template>
+  <div>
+    <h2>Upload Image</h2>
+    <input type="file" @change="onFileChange" />
+    <input type="text" v-model="apiUrl" placeholder="Enter API URL" />
+    <button @click="uploadImage">Upload</button>
+    <div v-if="response" class="response">{{ response }}</div>
+    <div v-if="error" class="error">{{ error }}</div>
+  </div>
+</template>
+
+<script>
+import axios from 'axios';
+
+export default {
+  data() {
+    return {
+      selectedFile: null,
+      apiUrl: '',
+      response: null,
+      error: null,
+    };
+  },
+  methods: {
+    onFileChange(event) {
+      this.selectedFile = event.target.files[0];
+    },
+    async uploadImage() {
+      if (!this.selectedFile || !this.apiUrl) {
+        alert('Please select a file and enter the API URL.');
+        return;
+      }
+
+      const formData = new FormData();
+      formData.append('file', this.selectedFile);
+      formData.append('apiUrl', this.apiUrl);
+
+      try {
+        const res = await axios.post('http://192.168.96.102:8443/images/upload-to-api', formData, {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+          },
+        });
+        this.response = res.data;
+        this.error = null; // Reset error if request is successful
+      } catch (err) {
+        this.error = err.response ? err.response.data : 'Error uploading image.';
+        this.response = null; // Reset response if there was an error
+      }
+    },
+  },
+};
+</script>
+
+<style scoped>
+.response {
+  color: green;
+}
+.error {
+  color: red;
+}
+</style>
