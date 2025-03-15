@@ -56,10 +56,11 @@ export default {
 <style scoped>
 .search {
   color: #e0e0e0;
-  background-color:rgb(246, 223, 178, 0.77);
+  background-color:rgb(182, 153, 97, 0.77);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px #9b59b6;
+  margin-bottom: 20px; 
 }
 input {
   color: #e0e0e0;
@@ -67,6 +68,7 @@ input {
   border: none;
   padding: 10px;
   border-radius: 5px;
+  margin-bottom: 20px; 
 }
 button {
   background-color: #8e44ad;

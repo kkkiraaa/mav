@@ -82,10 +82,11 @@ export default {
 <style scoped>
 .uploader {
   color: #e0e0e0;
-  background-color: rgba(246, 223, 178, 0.77);
+  background-color: rgba(182, 153, 97, 0.77);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px #9b59b6;
+  margin-bottom: 20px; 
 }
 
 input[type="file"] {
@@ -115,11 +116,7 @@ button:hover {
   height: auto;
 }
 
-.bounding-box {
-  position: absolute; /* Позиционирование для наложения на изображение */
-  border: 2px solid red; /* Цвет и стиль рамки */
-  pointer-events: none; /* Отключение взаим  одействия с рамкой */
-}
+
 response-container {
   background-color: rgba(246, 223, 178, 0.5); /* Полупрозрачный фон для контейнера с ответом */
   border: 1px solid #9b59b6; /* Рамка вокруг контейнера */
