@@ -23,16 +23,20 @@ export default {
 
 <style>
 #app {
-  text-align: center;
-  background-color: #2c003c;
-  min-height: 100vh;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-image: url("C:\Users\ASUS\Desktop\app\src\assets\фон.jpeg"); 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center center;
+  background-attachment: fixed; 
   color: #e0e0e0;
-  padding: 20px;
+  text-align: center;
 }
 
 .title {
-  color: #9b59b6;
-  text-shadow: 0 0 20px #9b59b6;
+  color: #17e5bf;
+  text-shadow: 0 0 20px #10b4cabd;
 }
-</style>
 
+</style>
