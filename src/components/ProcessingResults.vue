@@ -33,11 +33,28 @@ export default {
 </script>
 
 <style scoped>
-.results {
-  color: #e0e0e0;
-  background-color: #3a003c;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #9b59b6;
+.results{
+
+display: inline-block;
+padding: 12px 24px;
+width: 450px;
+height: 140px;
+text-align: center;
+text-decoration: none;
+cursor: pointer;
+
+background-color: #6ecdf586;
+color: #ffffff;
+border: none;
+border-radius: 8px;
+
+
+transition: background-color 0.3s ease;
+}
+
+
+
+.results:hover {
+background-color: #2490f5bb;
 }
 </style>
